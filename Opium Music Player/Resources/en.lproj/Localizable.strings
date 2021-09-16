@@ -1,0 +1,48 @@
+/* 
+  Localizable.strings
+  Opium ~ Music Player for IPhone
+
+  Created by Антон Сивцов on 13.09.2021.
+  
+*/
+
+"sign_out" = "Sign Out successfully";
+"play_all_songs" = "Play All";
+"categories" = "Categories";
+"releases" = "Releases";
+"search" = "Search";
+
+"app_name" = "OPIUM";
+"sign_in" = "Sign In";
+"sign_in_wrong_title" = "Ooops";
+"sign_in_wrong_describing" = "Something went wrong when signing in.";
+"cancel_title" = "Cancel";
+
+"auth_success" = "Authorization is successfull";
+"albums_title" = "Albums";
+"singles_title" = "Singles";
+
+"search_bar_placeholder" = "Songs, Artists, Albums";
+"empty_search_text" = "Tap the bar to search!";
+
+"search_song_section" = "Songs";
+"search_artist_section" = "Artists";
+"search_playlist_section" = "Playlists";
+"search_album_section" = "Albums";
+
+"profile_title" = "Profile";
+"full_name_field" = "Full Name: ";
+"email_field" = "Email: ";
+"id_field" = "ID: ";
+"subscription_field" = "Subscription: ";
+"profile_error" = "Failed to load profile";
+
+"settings_title" = "Settings";
+"profile_title" = "Profile";
+"view_profile" = "View your profile";
+"account_title" = "Account";
+"sign_out" = "Sign Out";
+"sign_out_text" = "Are you sure?";
+"success_sign_out" = "Successfully sign out";
+
+"top_tracks" = "Top Tracks";
