@@ -36,4 +36,5 @@ Backup[ ]of[ ]*.key/
 Backup[ ]of[ ]*.numbers/
 
 # Cocoapods
+*.generated.swift
 Pods/
