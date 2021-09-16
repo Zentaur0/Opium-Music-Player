@@ -1,0 +1,48 @@
+/* 
+  Localizable.strings
+  Opium ~ Music Player for IPhone
+
+  Created by Антон Сивцов on 13.09.2021.
+  
+*/
+
+"sign_out" = "Успешный выход";
+"play_all_songs" = "Воспроизвести всё";
+"categories" = "Категории";
+"releases" = "Релизы";
+"search" = "Поиск";
+
+"app_name" = "OPIUM";
+"sign_in" = "Войти";
+"sign_in_wrong_title" = "Ууупс";
+"sign_in_wrong_describing" = "Что-то пошло не так при попытке войти.";
+"cancel_title" = "Отмена";
+
+"auth_success" = "Успешная авторизация";
+"albums_title" = "Альбомы";
+"singles_title" = "Синглы";
+
+"search_bar_placeholder" = "Песни, исполнители, альбомы";
+"empty_search_text" = "Для поиска нажми на бар!";
+
+"search_song_section" = "Песни";
+"search_artist_section" = "Исполнители";
+"search_playlist_section" = "Плейлисты";
+"search_album_section" = "Альбомы";
+
+"profile_title" = "Профиль";
+"full_name_field" = "Полное имя: ";
+"email_field" = "Email: ";
+"id_field" = "ID: ";
+"subscription_field" = "Подписка: ";
+"profile_error" = "Ошибка при загрузке профиля";
+
+"settings_title" = "Настройки";
+"profile_title" = "Профиль";
+"view_profile" = "Посмотреть профиль";
+"account_title" = "Аккаунт";
+"sign_out" = "Выйти";
+"sign_out_text" = "Уверены?";
+"success_sign_out" = "Успешный выход";
+
+"top_tracks" = "Топ Треки";
