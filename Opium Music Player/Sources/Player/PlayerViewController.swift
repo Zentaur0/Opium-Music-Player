@@ -24,7 +24,6 @@ final class PlayerViewController: UIViewController {
     
     // MARK: - Properties
 
-    var onDismiss: (() -> Void)?
     var isPlaying: Bool?
     weak var dataSource: PlayerDataSource?
     weak var delegate: PlayerViewControllerDelegate?
@@ -69,7 +68,6 @@ final class PlayerViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        onDismiss?()
         addPlayerObservers()
     }
     

@@ -152,6 +152,7 @@ extension PlayerControlView {
     @objc private func didTapBack() {
         isPlaying = isPlaying ? isPlaying : !isPlaying
         playButton.setImage(isPlaying ? R.image.pausePlay() : R.image.startPlay(), for: .normal)
+        NotificationCenter.default.post(name: .changePlayPauseMini, object: nil)
         delegate?.playerControlViewDidTapBack()
     }
     
@@ -162,8 +163,8 @@ extension PlayerControlView {
     @objc private func didTapPlayPause() {
         isPlaying = !isPlaying
         playButton.setImage(isPlaying ? R.image.pausePlay() : R.image.startPlay(), for: .normal)
-        delegate?.playerControlViewDidTapPlayPause()
         NotificationCenter.default.post(name: .changePlayPauseMini, object: nil)
+        delegate?.playerControlViewDidTapPlayPause()
     }
     
     @objc private func didSlideSlider(_ slider: UISlider, _ notification: NSNotification) {
