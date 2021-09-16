@@ -62,8 +62,8 @@
 		23D994F226F366DF0088B3F7 /* PlayerControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D994BC26F366DF0088B3F7 /* PlayerControlView.swift */; };
 		23D994F326F366DF0088B3F7 /* PlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D994BD26F366DF0088B3F7 /* PlayerPresenter.swift */; };
 		23D994F426F366DF0088B3F7 /* MiniPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D994BE26F366DF0088B3F7 /* MiniPlayerViewController.swift */; };
-		23D994F726F367500088B3F7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D994F626F367500088B3F7 /* R.generated.swift */; };
 		23D994F926F367920088B3F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D994F826F367920088B3F7 /* Assets.xcassets */; };
+		23D994FF26F37EAC0088B3F7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D994FE26F37EAC0088B3F7 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,9 +123,9 @@
 		23D994BC26F366DF0088B3F7 /* PlayerControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerControlView.swift; sourceTree = "<group>"; };
 		23D994BD26F366DF0088B3F7 /* PlayerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerPresenter.swift; sourceTree = "<group>"; };
 		23D994BE26F366DF0088B3F7 /* MiniPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniPlayerViewController.swift; sourceTree = "<group>"; };
-		23D994F626F367500088B3F7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		23D994F826F367920088B3F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23D994FA26F367B90088B3F7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D994FE26F37EAC0088B3F7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		2F2A44ED576744075AC0E59F /* Pods-Opium Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opium Music Player.debug.xcconfig"; path = "Target Support Files/Pods-Opium Music Player/Pods-Opium Music Player.debug.xcconfig"; sourceTree = "<group>"; };
 		36DFBFBEBB59D628689A8703 /* Pods-Opium Music Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opium Music Player.release.xcconfig"; path = "Target Support Files/Pods-Opium Music Player/Pods-Opium Music Player.release.xcconfig"; sourceTree = "<group>"; };
 		F99898F28585BE39F5CDE5CF /* Pods_Opium_Music_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Opium_Music_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,7 +175,7 @@
 			children = (
 				23D994F826F367920088B3F7 /* Assets.xcassets */,
 				23D994FA26F367B90088B3F7 /* Info.plist */,
-				23D994F626F367500088B3F7 /* R.generated.swift */,
+				23D994FE26F37EAC0088B3F7 /* R.generated.swift */,
 				23D9946E26F366DF0088B3F7 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -589,7 +589,7 @@
 				23D994E326F366DF0088B3F7 /* ReleaseViewController.swift in Sources */,
 				23D994F126F366DF0088B3F7 /* PlayerViewController.swift in Sources */,
 				23D994D026F366DF0088B3F7 /* Playlists.swift in Sources */,
-				23D994F726F367500088B3F7 /* R.generated.swift in Sources */,
+				23D994FF26F37EAC0088B3F7 /* R.generated.swift in Sources */,
 				23D994D826F366DF0088B3F7 /* UINavigationController + Extensions.swift in Sources */,
 				23D994DD26F366DF0088B3F7 /* ReleaseCollectionViewCell.swift in Sources */,
 				23D994F326F366DF0088B3F7 /* PlayerPresenter.swift in Sources */,

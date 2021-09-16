@@ -107,7 +107,6 @@ extension PlayerPresenter {
     private func checkIfPlayerIsPlaying() {
         if let player = self.player, player.timeControlStatus == .playing {
             player.pause()
-            
         }
         
         if let player = self.playerQueue, player.timeControlStatus == .playing {
@@ -227,25 +226,33 @@ extension PlayerPresenter {
     }
     
     private func setupIndexWhenBackTapped(notification: Notification?) {
-        if index != tracks.count - 1 {
-            if let number = notification?.object as? Int {
-                index -= number
-                let track = tracks[index]
-                let viewModel = DetailedViewModel(name: track.name,
-                                                  artistName: nil,
-                                                  image: URL(string: track.album?.images?.first?.url ?? ""))
-                delegate?.configureMiniPlayer(viewModel: viewModel)
+        guard index > 0 else { return }
+        
+        if let number = notification?.object as? Int {
+            index -= number
+            let track = tracks[index]
+            let viewModel = DetailedViewModel(name: track.name,
+                                              artistName: nil,
+                                              image: URL(string: track.album?.images?.first?.url ?? ""))
+            delegate?.configureMiniPlayer(viewModel: viewModel)
+        } else {
+            index -= 1
+            NotificationCenter.default.post(name: .addMiniPlayer, object: tracks[index])
+            NotificationCenter.default.post(name: .observeTrack, object: tracks[index])
+            if let _ = UIApplication.topViewController() as? PlayerViewController {
+                return
             } else {
-                index -= 1
-                NotificationCenter.default.post(name: .addMiniPlayer, object: tracks[index])
-                NotificationCenter.default.post(name: .observeTrack, object: tracks[index])
-                if let _ = UIApplication.topViewController() as? PlayerViewController {
-                    return
-                } else {
-                    NotificationCenter.default.post(name: .openPlayer, object: tracks[index])
-                }
+                NotificationCenter.default.post(name: .openPlayer, object: tracks[index])
             }
         }
+    }
+    
+    private func preparePlayer(player: AVPlayer) {
+        let track = tracks[index]
+        self.playerVC?.setTrack(track: track)
+        let item = AVPlayerItem(url: URL(string: track.preview_url ?? "") ?? URL(fileURLWithPath: ""))
+        player.replaceCurrentItem(with: item)
+        self.playerVC?.refreshUI()
     }
     
 }
@@ -298,30 +305,22 @@ extension PlayerPresenter: PlayerViewControllerDelegate {
     
     func didTapBack(notification: Notification?) {
         if tracks.isEmpty {
-            player?.pause()
+            self.checkIfPlayerIsPlaying()
             guard let _ = UIApplication.topViewController(),
                   let track = track else { return }
             self.startPlaying(track: track)
         } else if let player = playerQueue {
-            setupIndexWhenBackTapped(notification: notification)
-            let track = tracks[index]
-            playerVC?.setTrack(track: track)
-            let item = AVPlayerItem(url: URL(string: track.preview_url ?? "") ?? URL(fileURLWithPath: ""))
-            player.replaceCurrentItem(with: item)
-            playerVC?.refreshUI()
+            self.setupIndexWhenBackTapped(notification: notification)
+            self.preparePlayer(player: player)
         }
     }
     
     func didTapNext(notification: Notification?) {
         if tracks.isEmpty {
-            player?.pause()
+            self.checkIfPlayerIsPlaying()
         } else if let player = playerQueue {
-            setupIndexWhenNextTapped(notification: notification)
-            let track = tracks[index]
-            playerVC?.setTrack(track: track)
-            let item = AVPlayerItem(url: URL(string: track.preview_url ?? "") ?? URL(fileURLWithPath: ""))
-            player.replaceCurrentItem(with: item)
-            playerVC?.refreshUI()
+            self.setupIndexWhenNextTapped(notification: notification)
+            self.preparePlayer(player: player)
         }
     }
     
@@ -338,10 +337,9 @@ extension PlayerPresenter: PlayerViewControllerDelegate {
     func didTapArtistName() {
         let artistID = currentTrack?.artists?.first?.id
         let vc = AppContainer.makeArtistDetailedVC(artistID: artistID ?? "")
-        playerVC?.onDismiss = {
+        playerVC?.dismiss(animated: true) {
             UIApplication.topViewController()?.present(vc, animated: true)
         }
-        playerVC?.dismiss(animated: true)
     }
     
 }
