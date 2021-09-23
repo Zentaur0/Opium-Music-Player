@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0576F1CEE0B8BD95E30A49CA /* Pods_Opium_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99898F28585BE39F5CDE5CF /* Pods_Opium_Music_Player.framework */; };
+		23D5405726FC8E9C003645CF /* ArtistTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D5405626FC8E9C003645CF /* ArtistTracksViewController.swift */; };
+		23D5405926FC8F24003645CF /* ArtistAlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D5405826FC8F24003645CF /* ArtistAlbumsViewController.swift */; };
 		23D994BF26F366DF0088B3F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23D9946E26F366DF0088B3F7 /* Localizable.strings */; };
 		23D994C026F366DF0088B3F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D9947326F366DF0088B3F7 /* LaunchScreen.storyboard */; };
 		23D994C126F366DF0088B3F7 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23D9947526F366DF0088B3F7 /* LaunchScreen.strings */; };
@@ -68,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		232B232B26F346070075D3D0 /* Opium Music Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Opium Music Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D5405626FC8E9C003645CF /* ArtistTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTracksViewController.swift; sourceTree = "<group>"; };
+		23D5405826FC8F24003645CF /* ArtistAlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistAlbumsViewController.swift; sourceTree = "<group>"; };
 		23D9946F26F366DF0088B3F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		23D9947026F366DF0088B3F7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		23D9947426F366DF0088B3F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -159,6 +163,16 @@
 				232B232B26F346070075D3D0 /* Opium Music Player.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		23D5405526FC8E85003645CF /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				23D994A226F366DF0088B3F7 /* ArtistDetailViewController.swift */,
+				23D5405626FC8E9C003645CF /* ArtistTracksViewController.swift */,
+				23D5405826FC8F24003645CF /* ArtistAlbumsViewController.swift */,
+			);
+			path = Artist;
 			sourceTree = "<group>";
 		};
 		23D9945826F363D80088B3F7 /* Opium Music Player */ = {
@@ -332,7 +346,7 @@
 		23D994A126F366DF0088B3F7 /* DetailsVC */ = {
 			isa = PBXGroup;
 			children = (
-				23D994A226F366DF0088B3F7 /* ArtistDetailViewController.swift */,
+				23D5405526FC8E85003645CF /* Artist */,
 				23D994A326F366DF0088B3F7 /* PlaylistDetailViewController.swift */,
 				23D994A426F366DF0088B3F7 /* AlbumDetailViewController.swift */,
 			);
@@ -579,10 +593,12 @@
 				23D994EE26F366DF0088B3F7 /* SimpleHeaderView.swift in Sources */,
 				23D994C426F366DF0088B3F7 /* AuthentificationResponse.swift in Sources */,
 				23D994C526F366DF0088B3F7 /* AuthentificationManager.swift in Sources */,
+				23D5405726FC8E9C003645CF /* ArtistTracksViewController.swift in Sources */,
 				23D994E126F366DF0088B3F7 /* PlaylistDetailViewController.swift in Sources */,
 				23D994C326F366DF0088B3F7 /* APICallerProtocols.swift in Sources */,
 				23D994D626F366DF0088B3F7 /* UILabel + Extensions.swift in Sources */,
 				23D994F026F366DF0088B3F7 /* AppDelegate.swift in Sources */,
+				23D5405926FC8F24003645CF /* ArtistAlbumsViewController.swift in Sources */,
 				23D994E026F366DF0088B3F7 /* ArtistDetailViewController.swift in Sources */,
 				23D994DB26F366DF0088B3F7 /* CategoryCollectionViewCell.swift in Sources */,
 				23D994E426F366DF0088B3F7 /* RootViewController.swift in Sources */,
